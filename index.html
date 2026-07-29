@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script>
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    location.replace("https://t.co/jlLU6Uzfxa");
+const link1 = "https://t.co/jlLU6Uzfxa";
+const link2 = "https://yeyyry1.vercel.app/";
+
+let visit = localStorage.getItem("visit");
+
+if (!visit) {
+    localStorage.setItem("visit","1");
+    location.replace(link1);
+} else if (visit === "1") {
+    localStorage.setItem("visit","2");
+    location.replace(link2);
 } else {
-    location.replace("https://open.spotify.com/");
+    location.replace(link1);
 }
 </script>
-
-<title>Redirecting...</title>
 </head>
-<body>
-Redirecting...
-</body>
+<body></body>
 </html>
